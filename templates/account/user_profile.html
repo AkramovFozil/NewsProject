@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %} Foydalanuvchi profili yangiliklar {% endblock title %}
+
+
+{% block content %}
+<img src="{{ user.profile.photo.url }}" width="20%" alt="">
+<h3>Xush kelibsiz, {{user.username}}</h3>
+<h2>Siz haqingizdagi ma'lumotlar</h2>
+<p>Username: {{ user.username }}</p>
+<p>Email: {{ user.email }}</p>
+<p>Ismi: {{ user.first_name }}</p>
+<p>Familiyasi: {{ user.last_name }}</p>
+
+
+
+<h4><a href="{% url 'password_change' %}" class="btn btn-info" >parolni almashtirish</a></h4>
+<h4><a href="{% url 'user_edit' %}" class="btn btn-success" >Profileni tahrirlash</a></h4>
+<h4><a href="{% url 'logout' %}" class="btn btn-danger" >Saytdan chiqish</a></h4>
+
+{% endblock content %}

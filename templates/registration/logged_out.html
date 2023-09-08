@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Logout sahifasi {% endblock %}
+
+
+
+
+{% block content %}
+    <h2 class="text-center">Veb-saytdan chiqish - logout</h2>
+    <p>Siz veb-saytdan chiqdingiz! <a href="{% url 'login' %}" class="btn btn-success">Qayta kirish</a></p>
+
+
+
+{% endblock %}

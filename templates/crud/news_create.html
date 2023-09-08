@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %} Yangilik qo'shish {% endblock title %}
+
+
+{% block content %}
+
+
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-info">Xabar qo'shish</button>
+</form>
+
+
+{% endblock content %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %} Texnologiya yangiliklari {% endblock title %}
+
+
+{% block content %}
+
+{% for news in techno_news %}
+
+<div class="row">
+
+    <article class="card shadow" style="width: 80%; margin: 10px auto; box-shadow: 1px 2px 1px 2px #ccc">
+
+        <img src="{{ news.image.url }}" style="width: 30%" alt="">
+
+        <a href="{% url 'news-detail' news.pk %}">{{ news.title }}</a>
+
+        <p>{{ news.category.name }} - {{ news.created_time }}</p>
+
+    </article>
+
+</div>
+
+{% endfor %}
+
+{% endblock content %}
